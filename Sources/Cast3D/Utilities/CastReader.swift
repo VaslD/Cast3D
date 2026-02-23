@@ -106,7 +106,7 @@ public struct CastReader {
 
             case .vector2:
                 let size = Int(header.arrayLength)
-                let values = try [(Float, Float)](unsafeUninitializedCapacity: size) { buffer, count in
+                let values = try [Vector2](unsafeUninitializedCapacity: size) { buffer, count in
                     try self.handle.read(into: UnsafeMutableRawBufferPointer(buffer))
                     count = size
                 }
@@ -114,7 +114,7 @@ public struct CastReader {
 
             case .vector3:
                 let size = Int(header.arrayLength)
-                let values = try [(Float, Float, Float)](unsafeUninitializedCapacity: size) { buffer, count in
+                let values = try [Vector3](unsafeUninitializedCapacity: size) { buffer, count in
                     try self.handle.read(into: UnsafeMutableRawBufferPointer(buffer))
                     count = size
                 }
@@ -122,7 +122,7 @@ public struct CastReader {
 
             case .vector4:
                 let size = Int(header.arrayLength)
-                let values = try [(Float, Float, Float, Float)](unsafeUninitializedCapacity: size) { buffer, count in
+                let values = try [Vector4](unsafeUninitializedCapacity: size) { buffer, count in
                     try self.handle.read(into: UnsafeMutableRawBufferPointer(buffer))
                     count = size
                 }

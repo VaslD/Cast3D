@@ -6,9 +6,9 @@ public enum RawPropertyValue {
     case float(Float)
     case double(Double)
     case string(String)
-    case vector2((Float, Float))
-    case vector3((Float, Float, Float))
-    case vector4((Float, Float, Float, Float))
+    case vector2(Vector2)
+    case vector3(Vector3)
+    case vector4(Vector4)
 
     public var value: Any {
         switch self {

@@ -23,7 +23,7 @@ public struct CastMetadataNode {
             case "sr":
                 sceneRoot = property.values.first?.value as? String
             default:
-                break
+                return nil
             }
         }
 

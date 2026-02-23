@@ -5,46 +5,42 @@ public struct RawNode {
 
     public func specialize() -> CastNode? {
         switch self.header.identifier {
-        /*
         case .root:
-            <#code#>
+            CastRootNode(self).flatMap(CastNode.root(_:))
         case .model:
-            <#code#>
+            CastModelNode(self).flatMap(CastNode.model(_:))
         case .mesh:
-            <#code#>
+            CastMeshNode(self).flatMap(CastNode.mesh(_:))
         case .hair:
-            <#code#>
+            CastHairNode(self).flatMap(CastNode.hair(_:))
         case .blendShape:
-            <#code#>
+            CastBlendShapeNode(self).flatMap(CastNode.blendShape(_:))
         case .skeleton:
-            <#code#>
+            CastSkeletonNode(self).flatMap(CastNode.skeleton(_:))
         case .bone:
-            <#code#>
+            CastBoneNode(self).flatMap(CastNode.bone(_:))
         case .inverseKinematicsHandle:
-            <#code#>
+            CastIKHandleNode(self).flatMap(CastNode.inverseKinematicsHandle(_:))
         case .constraint:
-            <#code#>
+            CastConstraintNode(self).flatMap(CastNode.constraint(_:))
         case .animation:
-            <#code#>
+            CastAnimationNode(self).flatMap(CastNode.animation(_:))
         case .curve:
-            <#code#>
+            CastCurveNode(self).flatMap(CastNode.curve(_:))
         case .curveModeOverride:
-            <#code#>
+            CastCurveModeOverrideNode(self).flatMap(CastNode.curveModeOverride(_:))
         case .notificationTrack:
-            <#code#>
+            CastNotificationTrackNode(self).flatMap(CastNode.notificationTrack(_:))
         case .material:
-            <#code#>
+            CastMaterialNode(self).flatMap(CastNode.material(_:))
         case .file:
-            <#code#>
+            CastFileNode(self).flatMap(CastNode.file(_:))
         case .color:
-            <#code#>
+            CastColorNode(self).flatMap(CastNode.color(_:))
         case .instance:
-            <#code#>
-        */
+            CastInstanceNode(self).flatMap(CastNode.instance(_:))
         case .metadata:
             CastMetadataNode(self).flatMap(CastNode.metadata(_:))
-        default:
-            nil
         }
     }
 }
